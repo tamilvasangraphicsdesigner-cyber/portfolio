@@ -860,15 +860,17 @@ button, input, textarea {
   }
 
   .hero {
-    min-height: 650px;
+    min-height: 750px;
     padding-top: 100px;
     align-items: flex-start;
-  }
+}
 
   .hero-bg {
-    background-position: 63% center;
-    opacity: .8;
-  }
+    background-size: auto 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
 
   .hero-content {
     width: 100%;
