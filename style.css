@@ -867,19 +867,32 @@ button, input, textarea {
     background-color: #050505;
 }
 
+  /* MOBILE HERO FIX */
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 950px;
+    padding: 100px 6% 40px;
+    align-items: flex-start;
+    background: #050505;
+  }
+
   .hero-bg {
-    background-size: 100% auto;
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-size: 100% auto !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
     opacity: 1;
-}
+  }
 
   .hero-content {
     width: 100%;
+    z-index: 2;
   }
 
   .hero h1 {
-    font-size: 55px;
+    font-size: clamp(45px, 10vw, 55px);
+    white-space: nowrap;
+    letter-spacing: -2px;
   }
 
   .hero h2 {
@@ -887,8 +900,14 @@ button, input, textarea {
   }
 
   .hero-content > p {
-    font-size: 12px;
+    font-size: 13px;
   }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
   .about {
     grid-template-columns: 1fr;
