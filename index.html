@@ -1,898 +1,238 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Tamil Vasan | Graphic Designer</title>
 
-    <meta name="description"
-        content="Tamil Vasan - Graphic Designer Portfolio. Explore branding, social media, print and creative design projects.">
+    <meta name="description" content="Tamil Vasan - Graphic Designer and Visual Artist with 1 year of professional experience.">
+
+    <link rel="stylesheet" href="style.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- ==============================
-         HEADER
-    ================================= -->
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <a href="#home" class="logo">T<span>V</span> <b>Tamil <span>Vasan</span></b></a>
 
-    <header class="header">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-        <div class="container navbar">
+        <a href="resume.pdf" class="cv-btn" download>Download CV <i class="fas fa-download"></i></a>
 
-            <a href="#home" class="logo">
+        <i class="fas fa-bars menu-icon" id="menuIcon"></i>
+    </nav>
+</header>
 
-                <div class="logo-mark">
-                    TV
-                </div>
+<!-- HERO SECTION -->
+<section class="hero" id="home">
 
-                <div class="logo-text">
-                    <strong>TAMIL VASAN</strong>
-                    <small>GRAPHIC DESIGNER</small>
-                </div>
+    <div class="hero-content">
+        <p class="intro">Hi, I'm</p>
 
-            </a>
+        <h1>Tamil <span>Vasan</span></h1>
 
-            <nav class="nav-menu">
+        <h2>Graphic Designer & Visual Artist.</h2>
 
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#resume" class="nav-link">Resume</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
-                <a href="#contact" class="nav-link">Contact</a>
-
-            </nav>
-
-            <a href="assets/resume.pdf" class="cv-button" download>
-                <i class="fa-solid fa-download"></i>
-                Download CV
-            </a>
-
-            <button class="menu-button" id="menuButton">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
+        <div class="experience-badge">
+            <i class="fas fa-briefcase"></i>
+            1 Year of Experience
         </div>
 
-    </header>
+        <p class="hero-description">
+            I design creative visuals that inspire, engage
+            and bring ideas to life.
+        </p>
 
-
-    <!-- ==============================
-         HERO
-    ================================= -->
-
-    <section class="hero" id="home">
-
-        <div class="hero-bg-shape shape-one"></div>
-        <div class="hero-bg-shape shape-two"></div>
-
-        <div class="container hero-grid">
-
-            <!-- Hero Content -->
-
-            <div class="hero-content">
-
-                <div class="hello">
-                    HELLO,
-                </div>
-
-                <h1>
-                    I'm <span>Tamil Vasan</span>
-                </h1>
-
-                <h2>
-                    Graphic Designer
-                </h2>
-
-                <p class="hero-description">
-                    I create clean, creative and meaningful visual designs
-                    that help brands communicate with confidence.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#portfolio" class="primary-button">
-                        View My Work
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-                <div class="social-links">
-
-                    <a href="#" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="#" aria-label="Behance">
-                        <i class="fa-brands fa-behance"></i>
-                    </a>
-
-                    <a href="#" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- Hero Image -->
-
-            <div class="hero-image-area">
-
-                <!-- Blue Circle -->
-
-                <div class="circle-bg"></div>
-
-
-                <!-- Profile Image Circle -->
-
-                <div class="profile-circle">
-
-                    <img
-                        src="assets/profile.png"
-                        alt="Tamil Vasan - Graphic Designer"
-                        class="hero-profile-img">
-
-                </div>
-
-
-                <!-- Software Icons -->
-
-                <div class="software-icon photoshop">
-                    Ps
-                </div>
-
-                <div class="software-icon illustrator">
-                    Ai
-                </div>
-
-                <div class="software-icon figma">
-                    F
-                </div>
-
-                <div class="software-icon indesign">
-                    Id
-                </div>
-
-
-                <!-- Hand Text -->
-
-                <div class="hand-text right-hand">
-
-                    Creative<br>
-                    &<br>
-                    Focused
-
-                </div>
-
-            </div>
-
+        <div class="hero-buttons">
+            <a href="#portfolio" class="primary-btn">Explore My Work <i class="fas fa-arrow-right"></i></a>
+            <a href="resume.pdf" class="secondary-btn" download>Download CV <i class="fas fa-download"></i></a>
         </div>
 
-    </section>
+        <div class="social-icons">
+            <a href="https://www.behance.net/" target="_blank"><i class="fab fa-behance"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
 
+    <div class="hero-image">
+        <div class="circle-bg"></div>
+        <img src="images/profile.png" alt="Tamil Vasan Graphic Designer">
+        <p class="floating-text">Graphic Designer</p>
+    </div>
 
-    <!-- ==============================
-         ABOUT
-    ================================= -->
+</section>
 
-    <section class="section about-section" id="about">
+<!-- ABOUT SECTION -->
+<section class="about section" id="about">
 
-        <div class="container">
+    <div class="about-image">
+        <img src="images/profile.png" alt="Tamil Vasan">
+    </div>
 
-            <div class="section-heading">
+    <div class="about-content">
+        <p class="section-label">ABOUT ME</p>
 
-                <p>ABOUT ME</p>
+        <h2>Turning Ideas Into <span>Visual Masterpieces</span></h2>
 
-                <h2>
-                    A Little About <span>Me</span>
-                </h2>
+        <p>
+            I'm Tamil Vasan, a passionate Graphic Designer
+            with 1 year of professional experience in creating
+            modern and meaningful designs.
 
-            </div>
+            I love exploring creative concepts and delivering
+            visuals that communicate with impact.
+        </p>
 
+        <a href="#contact" class="primary-btn">Let's Talk <i class="fas fa-arrow-right"></i></a>
+    </div>
 
-            <div class="about-grid">
+    <div class="year-card">
+        <h2>1+</h2>
+        <p>Year Experience</p>
+    </div>
 
-                <!-- About Image -->
+</section>
 
-                <div class="about-image">
+<!-- SKILLS SECTION -->
+<section class="skills section" id="skills">
 
-                    <div class="about-circle"></div>
+    <p class="section-label">MY EXPERTISE</p>
+    <h2 class="section-title">Tools I Use to Bring Ideas to Life</h2>
 
-                    <img
-                        src="assets/profile.png"
-                        alt="Tamil Vasan Graphic Designer">
+    <div class="skills-grid">
 
-                </div>
+        <div class="skill-card"><i class="fas fa-image"></i><h3>Photoshop</h3></div>
+        <div class="skill-card"><i class="fas fa-pen-nib"></i><h3>Illustrator</h3></div>
+        <div class="skill-card"><i class="fas fa-book-open"></i><h3>InDesign</h3></div>
+        <div class="skill-card"><i class="fas fa-palette"></i><h3>Canva</h3></div>
+        <div class="skill-card"><i class="fas fa-shapes"></i><h3>Branding</h3></div>
+        <div class="skill-card"><i class="fas fa-hashtag"></i><h3>Social Media</h3></div>
+        <div class="skill-card"><i class="fas fa-image"></i><h3>Poster Design</h3></div>
+        <div class="skill-card"><i class="fas fa-pen-fancy"></i><h3>Logo Design</h3></div>
 
+    </div>
+</section>
 
-                <!-- About Content -->
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio section" id="portfolio">
 
-                <div class="about-content">
+    <p class="section-label">MY CREATIVE WORKS</p>
+    <h2 class="section-title">A Collection of My Designs</h2>
 
-                    <p class="about-intro">
-                        I'm Tamil Vasan, a passionate Graphic Designer focused on creating impactful visual experiences.
-                    </p>
+    <div class="portfolio-grid">
 
-                    <p>
-                        I enjoy transforming ideas into creative designs that are simple, attractive and meaningful.
-                        My work includes branding, social media designs, packaging, print designs and digital creatives.
-                    </p>
-
-
-                    <div class="about-points">
-
-                        <div>
-                            <i class="fa-solid fa-check"></i>
-                            <span>Creative Design</span>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-check"></i>
-                            <span>Brand Identity</span>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-check"></i>
-                            <span>Social Media Design</span>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-check"></i>
-                            <span>Print Design</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Journey -->
-
-            <div class="journey">
-
-                <div>
-
-                    <h3>
-                        My Creative Journey
-                    </h3>
-
-                    <p>
-                        My goal is to combine creativity and visual communication to create designs that make a strong impression.
-                    </p>
-
-                </div>
-
-
-                <div class="stats">
-
-                    <div class="stat-card">
-                        <strong>50+</strong>
-                        <span>Projects</span>
-                    </div>
-
-                    <div class="stat-card">
-                        <strong>10+</strong>
-                        <span>Brands</span>
-                    </div>
-
-                    <div class="stat-card">
-                        <strong>3+</strong>
-                        <span>Years Experience</span>
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="project">
+            <img src="images/logo-design.jpg" alt="Logo Design">
+            <div class="project-info"><h3>Logo Design</h3><p>Brand Identity</p></div>
         </div>
 
-    </section>
-
-
-    <!-- ==============================
-         RESUME
-    ================================= -->
-
-    <section class="section resume-section" id="resume">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <p>MY RESUME</p>
-
-                <h2>
-                    Experience & <span>Skills</span>
-                </h2>
-
-            </div>
-
-
-            <div class="resume-grid">
-
-                <!-- Experience -->
-
-                <div>
-
-                    <div class="resume-title">
-
-                        <i class="fa-solid fa-briefcase"></i>
-
-                        <h3>
-                            Experience
-                        </h3>
-
-                    </div>
-
-
-                    <div class="timeline">
-
-                        <div class="timeline-item">
-
-                            <div class="timeline-dot"></div>
-
-                            <h4>
-                                Graphic Designer
-                            </h4>
-
-                            <div class="timeline-date">
-                                Present
-                            </div>
-
-                            <p>
-                                Creating branding, social media, marketing and digital design solutions.
-                            </p>
-
-                        </div>
-
-
-                        <div class="timeline-item">
-
-                            <div class="timeline-dot"></div>
-
-                            <h4>
-                                Creative Designer
-                            </h4>
-
-                            <div class="timeline-date">
-                                Previous
-                            </div>
-
-                            <p>
-                                Worked on creative visual concepts, promotional materials and brand assets.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Skills -->
-
-                <div>
-
-                    <div class="resume-title">
-
-                        <i class="fa-solid fa-pen-ruler"></i>
-
-                        <h3>
-                            Design Skills
-                        </h3>
-
-                    </div>
-
-
-                    <div class="skills">
-
-                        <span>Adobe Photoshop</span>
-                        <span>Adobe Illustrator</span>
-                        <span>Adobe InDesign</span>
-                        <span>Figma</span>
-                        <span>Branding</span>
-                        <span>Logo Design</span>
-                        <span>Social Media</span>
-                        <span>Packaging</span>
-                        <span>Print Design</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="project">
+            <img src="images/social-media.jpg" alt="Social Media Design">
+            <div class="project-info"><h3>Social Media</h3><p>Creative Posters</p></div>
         </div>
 
-    </section>
-
-
-    <!-- ==============================
-         PORTFOLIO
-    ================================= -->
-
-    <section class="section portfolio-section" id="portfolio">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <p>MY WORK</p>
-
-                <h2>
-                    Selected <span>Projects</span>
-                </h2>
-
-            </div>
-
-
-            <div class="portfolio-grid">
-
-                <!-- Project 1 -->
-
-                <div class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/project-1.jpg"
-                            alt="Graphic Design Project 1">
-
-                        <div class="project-overlay">
-
-                            <a href="#" class="project-link">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-info">
-
-                        <span>Branding</span>
-
-                        <h3>
-                            Brand Identity
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Project 2 -->
-
-                <div class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/project-2.jpg"
-                            alt="Graphic Design Project 2">
-
-                        <div class="project-overlay">
-
-                            <a href="#" class="project-link">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-info">
-
-                        <span>Social Media</span>
-
-                        <h3>
-                            Social Media Design
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Project 3 -->
-
-                <div class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/project-3.jpg"
-                            alt="Graphic Design Project 3">
-
-                        <div class="project-overlay">
-
-                            <a href="#" class="project-link">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-info">
-
-                        <span>Packaging</span>
-
-                        <h3>
-                            Product Packaging
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Project 4 -->
-
-                <div class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/project-4.jpg"
-                            alt="Graphic Design Project 4">
-
-                        <div class="project-overlay">
-
-                            <a href="#" class="project-link">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-info">
-
-                        <span>Poster</span>
-
-                        <h3>
-                            Poster Design
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Project 5 -->
-
-                <div class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/project-5.jpg"
-                            alt="Graphic Design Project 5">
-
-                        <div class="project-overlay">
-
-                            <a href="#" class="project-link">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-info">
-
-                        <span>Creative</span>
-
-                        <h3>
-                            Creative Artwork
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Project 6 -->
-
-                <div class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/project-6.jpg"
-                            alt="Graphic Design Project 6">
-
-                        <div class="project-overlay">
-
-                            <a href="#" class="project-link">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-info">
-
-                        <span>Print</span>
-
-                        <h3>
-                            Print Design
-                        </h3>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="portfolio-button">
-
-                <a href="#" class="outline-button">
-
-                    View All Projects
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-            </div>
-
+        <div class="project">
+            <img src="images/branding.jpg" alt="Brand Identity">
+            <div class="project-info"><h3>Brand Identity</h3><p>Visual Branding</p></div>
         </div>
 
-    </section>
-
-
-    <!-- ==============================
-         CONTACT
-    ================================= -->
-
-    <section class="section contact-section" id="contact">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <p>GET IN TOUCH</p>
-
-                <h2>
-                    Let's Work <span>Together</span>
-                </h2>
-
-            </div>
-
-
-            <div class="contact-grid">
-
-                <!-- Contact Information -->
-
-                <div class="contact-info">
-
-                    <h3>
-                        Have a project in mind?
-                    </h3>
-
-                    <p>
-                        Feel free to contact me for design projects, collaborations or creative opportunities.
-                    </p>
-
-
-                    <div class="contact-item">
-
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-
-                        <div>
-
-                            <span>Email</span>
-
-                            <a href="mailto:yourmail@gmail.com">
-                                yourmail@gmail.com
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-
-                        <div>
-
-                            <span>Phone</span>
-
-                            <p>
-                                +91 XXXXX XXXXX
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-
-                        <div>
-
-                            <span>Location</span>
-
-                            <p>
-                                Tamil Nadu, India
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Contact Form -->
-
-                <div class="contact-form-box">
-
-                    <form>
-
-                        <div class="form-row">
-
-                            <div class="form-group">
-
-                                <label>Name</label>
-
-                                <input
-                                    type="text"
-                                    placeholder="Your Name">
-
-                            </div>
-
-
-                            <div class="form-group">
-
-                                <label>Email</label>
-
-                                <input
-                                    type="email"
-                                    placeholder="Your Email">
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label>Subject</label>
-
-                            <input
-                                type="text"
-                                placeholder="Project Subject">
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label>Message</label>
-
-                            <textarea
-                                rows="6"
-                                placeholder="Tell me about your project"></textarea>
-
-                        </div>
-
-
-                        <button
-                            type="submit"
-                            class="primary-button">
-
-                            Send Message
-
-                            <i class="fa-solid fa-paper-plane"></i>
-
-                        </button>
-
-                    </form>
-
-                </div>
-
-            </div>
-
+        <div class="project">
+            <img src="images/poster.jpg" alt="Poster Design">
+            <div class="project-info"><h3>Poster Design</h3><p>Promotional Creatives</p></div>
         </div>
 
-    </section>
+        <div class="project">
+            <img src="images/brochure.jpg" alt="Brochure Design">
+            <div class="project-info"><h3>Brochure Design</h3><p>Print Design</p></div>
+        </div>
 
+        <div class="project">
+            <img src="images/packaging.jpg" alt="Packaging Design">
+            <div class="project-info"><h3>Packaging Design</h3><p>Product Branding</p></div>
+        </div>
 
-    <!-- ==============================
-         FOOTER
-    ================================= -->
+    </div>
+</section>
 
-    <footer class="footer">
+<!-- EXPERIENCE SECTION -->
+<section class="experience section" id="experience">
 
-        <div class="container footer-content">
+    <p class="section-label">MY JOURNEY</p>
+    <h2 class="section-title">Building Creative Solutions</h2>
 
-            <div class="footer-logo">
+    <div class="timeline">
+        <div class="timeline-dot"></div>
 
-                <div>
-
-                    <strong>TAMIL VASAN</strong>
-
-                    <small>
-                        GRAPHIC DESIGNER
-                    </small>
-
-                </div>
-
-            </div>
-
+        <div class="timeline-content">
+            <h3>Graphic Designer</h3>
+            <h4>1 Year of Professional Experience</h4>
+            <p class="company">Company Name</p>
 
             <p>
-                © 2026 Tamil Vasan. All Rights Reserved.
+                Designed engaging visuals for digital and print media,
+                including social media creatives, posters, branding
+                and marketing materials.
             </p>
-
-
-            <div class="footer-social">
-
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-brands fa-behance"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-
-            </div>
-
         </div>
+    </div>
+</section>
 
-    </footer>
+<!-- CONTACT SECTION -->
+<section class="contact section" id="contact">
 
+    <div class="contact-info">
+        <p class="section-label">GET IN TOUCH</p>
+        <h2>Let's Work <span>Together!</span></h2>
 
-    <!-- JavaScript -->
+        <p>Have a project in mind or just want to say hi?
+        Feel free to reach out!</p>
 
-    <script src="script.js"></script>
+        <p><i class="fas fa-envelope"></i> yourmail@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="primary-btn">Send Message <i class="fas fa-arrow-right"></i></button>
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <a href="#home" class="logo">T<span>V</span> Tamil Vasan</a>
+    <p>© 2026 Tamil Vasan. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
