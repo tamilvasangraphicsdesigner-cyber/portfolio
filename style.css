@@ -808,18 +808,19 @@ button, input, textarea {
 
 /* RESPONSIVE */
 
-@media(max-width:1100px) {
-  .navbar { gap: 18px; }
-  .header { padding: 0 3%; }
-  .hero-content { width: 65%; }
-  .skills {
-    grid-template-columns: 1fr 2fr;
+@media (max-width: 768px) {
+  .hero-bg {
+    background-size: 100% auto !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    opacity: 1;
   }
-  .design-skills {
-    grid-column: 1 / -1;
-    border-left: none;
-    padding-left: 0;
+
+  .hero {
+    min-height: 750px;
+    background-color: #050505;
   }
+}
   .portfolio {
     grid-template-columns: 1fr;
   }
