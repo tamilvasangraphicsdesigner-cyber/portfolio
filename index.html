@@ -1,754 +1,367 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamil Vasan - Creative Portfolio & Visual Artist</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --bg-deep: #050505;
-            --bg-card: #0d0d0d;
-            --primary-red: #ff1e1e;
-            --accent-red: #ff3333;
-            --text-main: #ffffff;
-            --text-muted: #999999;
-            --border-color: rgba(255, 255, 255, 0.08);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-deep);
-            color: var(--text-main);
-            overflow-x: hidden;
-        }
-
-        /* Header / Navbar */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 60px;
-            background: rgba(5, 5, 5, 0.85);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 800;
-            font-size: 22px;
-            letter-spacing: -0.5px;
-        }
-
-        .logo-box {
-            background: var(--primary-red);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-weight: 900;
-            font-size: 16px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 40px;
-        }
-
-        nav ul li a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            color: var(--primary-red);
-        }
-
-        .cv-btn {
-            background: transparent;
-            color: white;
-            border: 1px solid var(--border-color);
-            padding: 10px 22px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-
-        .cv-btn:hover {
-            border-color: var(--primary-red);
-            background: rgba(255, 30, 30, 0.1);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 160px 60px 80px 60px;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            align-items: center;
-            position: relative;
-            background: radial-gradient(circle at 80% 30%, rgba(255, 30, 30, 0.15) 0%, transparent 50%);
-        }
-
-        .hero-content h3 {
-            color: var(--primary-red);
-            font-weight: 600;
-            font-size: 18px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .hero-content h3::before {
-            content: '';
-            width: 30px;
-            height: 2px;
-            background: var(--primary-red);
-        }
-
-        .hero-content h1 {
-            font-size: 64px;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 15px;
-        }
-
-        .hero-content h1 span {
-            color: var(--primary-red);
-        }
-
-        .hero-content h2 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--text-main);
-            margin-bottom: 20px;
-        }
-
-        .exp-badge {
-            background: linear-gradient(135deg, #ff1e1e, #b30000);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(255, 30, 30, 0.4);
-        }
-
-        .hero-content p {
-            color: var(--text-muted);
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            max-width: 500px;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-
-        .btn-primary {
-            background: var(--primary-red);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.3s;
-            box-shadow: 0 4px 20px rgba(255, 30, 30, 0.4);
-        }
-
-        .btn-primary:hover {
-            background: #e60000;
-            transform: translateY(-2px);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-icons a {
-            width: 40px;
-            height: 40px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .social-icons a:hover {
-            border-color: var(--primary-red);
-            color: var(--primary-red);
-            background: rgba(255, 30, 30, 0.05);
-        }
-
-        .hero-image-container {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .red-glow-circle {
-            position: absolute;
-            width: 380px;
-            height: 380px;
-            background: radial-gradient(circle, rgba(255, 30, 30, 0.4) 0%, rgba(255, 30, 30, 0) 70%);
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .hero-img {
-            width: 360px;
-            height: 440px;
-            object-fit: cover;
-            border-radius: 20px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .crown-icon {
-            position: absolute;
-            top: 40px;
-            right: 120px;
-            color: white;
-            font-size: 24px;
-            z-index: 3;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 60px;
-            display: grid;
-            grid-template-columns: 1fr 1.2fr 0.8fr;
-            gap: 30px;
-            align-items: center;
-            background: var(--bg-deep);
-        }
-
-        .about-card-left {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .about-card-left img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-
-        .about-text h3 {
-            color: var(--primary-red);
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .about-text h3::before {
-            content: '';
-            width: 20px;
-            height: 2px;
-            background: var(--primary-red);
-        }
-
-        .about-text h2 {
-            font-size: 36px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 15px;
-        }
-
-        .about-text h2 span {
-            color: var(--primary-red);
-        }
-
-        .about-text p {
-            color: var(--text-muted);
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 1px solid var(--primary-red);
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-
-        .btn-outline:hover {
-            background: var(--primary-red);
-        }
-
-        .exp-box-right {
-            background: linear-gradient(145deg, #120505, #0a0202);
-            border: 1px solid rgba(255, 30, 30, 0.3);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            position: relative;
-        }
-
-        .exp-box-right h1 {
-            font-size: 64px;
-            font-weight: 900;
-            color: var(--primary-red);
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-
-        .exp-box-right h4 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .exp-box-right p {
-            color: var(--text-muted);
-            font-size: 13px;
-            font-style: italic;
-            line-height: 1.5;
-        }
-
-        /* Skills Section */
-        .skills-section {
-            padding: 60px;
-            background: var(--bg-deep);
-        }
-
-        .section-header {
-            margin-bottom: 30px;
-        }
-
-        .section-header h2 {
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 14px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            gap: 15px;
-        }
-
-        .skill-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 20px 10px;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .skill-card:hover {
-            border-color: var(--primary-red);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 30, 30, 0.15);
-        }
-
-        .skill-card i {
-            font-size: 28px;
-            color: var(--primary-red);
-            margin-bottom: 12px;
-        }
-
-        .skill-card h4 {
-            font-size: 12px;
-            font-weight: 600;
-            color: white;
-        }
-
-        /* Creative Works Section */
-        .works-section {
-            padding: 60px;
-        }
-
-        .works-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 30px;
-        }
-
-        .works-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 200px);
-            gap: 20px;
-        }
-
-        .work-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .work-card:hover {
-            border-color: var(--primary-red);
-        }
-
-        .work-card.wide {
-            grid-column: span 2;
-        }
-
-        .work-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.75;
-            transition: 0.3s;
-        }
-
-        .work-card:hover img {
-            opacity: 1;
-            transform: scale(1.03);
-        }
-
-        .work-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px;
-            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-        }
-
-        .work-info span {
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--primary-red);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .work-info h4 {
-            font-size: 16px;
-            font-weight: 700;
-            color: white;
-            margin-top: 4px;
-        }
-
-        /* Experience Section & Contact Section */
-        .bottom-section {
-            padding: 60px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            background: var(--bg-deep);
-        }
-
-        .experience-box, .contact-box {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 35px;
-        }
-
-        .experience-box h2, .contact-box h2 {
-            font-size: 24px;
-            font-weight: 800;
-            margin-bottom: 25px;
-        }
-
-        .exp-item {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            border-left: 2px solid var(--primary-red);
-        }
-
-        .exp-item h4 {
-            font-size: 16px;
-            font-weight: 700;
-            color: white;
-        }
-
-        .exp-item span {
-            font-size: 13px;
-            color: var(--primary-red);
-            font-weight: 600;
-        }
-
-        .exp-item p {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-top: 5px;
-        }
-
-        /* Contact Form */
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .contact-form input, .contact-form textarea {
-            background: #050505;
-            border: 1px solid var(--border-color);
-            padding: 14px 18px;
-            border-radius: 10px;
-            color: white;
-            font-size: 14px;
-            outline: none;
-            transition: 0.3s;
-        }
-
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: var(--primary-red);
-        }
-
-        .contact-form textarea {
-            resize: none;
-            height: 110px;
-        }
-
-        /* Footer */
-        footer {
-            padding: 30px 60px;
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-muted);
-            font-size: 13px;
-        }
-
-        /* Responsive */
-        @media(max-width: 1024px) {
-            .hero { grid-template-columns: 1fr; text-align: center; }
-            .hero-content { display: flex; flex-direction: column; align-items: center; }
-            .about-section { grid-template-columns: 1fr; }
-            .skills-grid { grid-template-columns: repeat(4, 1fr); }
-            .works-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
-            .bottom-section { grid-template-columns: 1fr; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tamil Vasan - Graphic Designer and Visual Artist. Explore creative branding, poster, logo and social media designs.">
+  <title>Tamil Vasan | Graphic Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <div class="logo-box">TV</div>
-            <span>Tamil Vasan</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <a href="#contact" class="cv-btn"><i class="fa-solid fa-download"></i> Download CV</a>
-    </header>
+<!-- NAVBAR -->
+<header class="header">
+  <a href="#home" class="logo">
+    <span class="logo-icon">T<span>V</span></span>
+    <span>Tamil <b>Vasan</b></span>
+  </a>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h3>Hi, I'm</h3>
-            <h1>Tamil <span>Vasan</span></h1>
-            <h2>Graphic Designer & Visual Artist.</h2>
-            <div class="exp-badge">
-                <i class="fa-solid fa-briefcase"></i> 1 Year of Experience
-            </div>
-            <p>I design creative visuals that inspire, engage and bring ideas to life with flawless aesthetics and impact.</p>
-            <div class="hero-btns">
-                <a href="#portfolio" class="btn-primary">Explore My Work <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#contact" class="cv-btn">Download CV <i class="fa-solid fa-download"></i></a>
-            </div>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-behance"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-        </div>
-        <div class="hero-image-container">
-            <div class="red-glow-circle"></div>
-            <i class="fa-solid fa-crown crown-icon"></i>
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" alt="Tamil Vasan" class="hero-img">
-        </div>
-    </section>
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- About Section -->
-    <section class="about-section" id="about">
-        <div class="about-card-left">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=500" alt="About Profile">
-        </div>
-        <div class="about-text">
-            <h3>About Me</h3>
-            <h2>Turning Ideas Into <span>Visual Masterpieces</span></h2>
-            <p>I'm Tamil Vasan, a passionate Graphic Designer with 1 year of professional experience in creating modern and meaningful designs. I love exploring creative concepts and delivering visuals that communicate with impact.</p>
-            <a href="#contact" class="btn-outline">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="exp-box-right">
-            <h1>1+</h1>
-            <h4>Year Experience</h4>
-            <p>"Design is not just what it looks like, but how it makes you feel." — Tamil Vasan</p>
-        </div>
-    </section>
+  <a href="resume.pdf" download class="download-btn">
+    Download CV <i class="fas fa-download"></i>
+  </a>
 
-    <!-- Skills Section -->
-    <section class="skills-section" id="skills">
-        <div class="section-header">
-            <h2>My Skills</h2>
-            <p>Tools I Use to Bring Ideas to Life</p>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card"><i class="fa-solid fa-pen-nib"></i><h4>Photoshop</h4></div>
-            <div class="skill-card"><i class="fa-solid fa-vector-square"></i><h4>Illustrator</h4></div>
-            <div class="skill-card"><i class="fa-solid fa-book-open"></i><h4>InDesign</h4></div>
-            <div class="skill-card"><i class="fa-solid fa-palette"></i><h4>Canva</h4></div>
-            <div class="skill-card"><i class="fa-solid fa-shield-halved"></i><h4>Branding</h4></div>
-            <div class="skill-card"><i class="fa-solid fa-bullhorn"></i><h4>Social Media</h4></div>
-            <div class="skill-card"><i class="fa-solid fa-image"></i><h4>Poster Design</h4></div>
-            <div class="skill-card"><i class="fa-solid fa-cube"></i><h4>Logo Design</h4></div>
-        </div>
-    </section>
+  <div class="menu-btn" id="menu-btn">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
 
-    <!-- Creative Works / Portfolio -->
-    <section class="works-section" id="portfolio">
-        <div class="works-header">
-            <div class="section-header" style="margin-bottom:0;">
-                <h2>My Creative Works</h2>
-                <p>A Collection of My Best Designs</p>
-            </div>
-            <a href="#contact" class="btn-outline">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="works-grid">
-            <div class="work-card wide">
-                <img src="https://images.unsplash.com/photo-1626544827763-d516dce335e2?auto=format&fit=crop&q=80&w=800" alt="Logo Design">
-                <div class="work-info">
-                    <span>Logo Design</span>
-                    <h4>Brand Identity & TV Logo</h4>
-                </div>
-            </div>
-            <div class="work-card">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=500" alt="Poster">
-                <div class="work-info">
-                    <span>Social Media Poster</span>
-                    <h4>Dream Bigger Campaign</h4>
-                </div>
-            </div>
-            <div class="work-card">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=500" alt="Headphone Packaging">
-                <div class="work-info">
-                    <span>Product Advertisement</span>
-                    <h4>Headphone Packaging</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
 
-    <!-- Experience & Contact Section -->
-    <div class="bottom-section" id="experience">
-        <div class="experience-box">
-            <h2>My Experience</h2>
-            <div class="exp-item">
-                <h4>Graphic Designer</h4>
-                <span>1 Year of Professional Experience</span>
-                <p><strong>Creative Point</strong> — Designed engaging visuals for digital and print media, including social media creatives, posters, branding and marketing materials.</p>
-            </div>
-        </div>
-        <div class="contact-box" id="contact">
-            <h2>Let's Work <span>Together!</span></h2>
-            <p style="color: var(--text-muted); font-size: 13px;">Have a project in mind or just want to say hi? Feel free to reach out!</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn-primary" style="border:none; cursor:pointer; justify-content:center;">Send Message <i class="fa-solid fa-arrow-right"></i></button>
-            </form>
-        </div>
+    <div class="intro">
+      <span class="line"></span>
+      <h3>Hi, I'm</h3>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="logo">
-            <div class="logo-box" style="padding: 4px 8px; font-size: 12px;">TV</div>
-            <span>Tamil Vasan</span>
-        </div>
-        <p>&copy; 2026 Tamil Vasan. All rights reserved.</p>
-    </footer>
+    <h1>Tamil <span>Vasan</span></h1>
 
+    <h2>Graphic Designer & Visual Artist.</h2>
+
+    <div class="experience-badge">
+      <i class="fas fa-briefcase"></i>
+      1 Year of Experience
+    </div>
+
+    <p>
+      I design creative visuals that inspire, engage
+      <br>and bring ideas to life.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#portfolio" class="primary-btn">
+        Explore My Work <i class="fas fa-arrow-right"></i>
+      </a>
+
+      <a href="resume.pdf" download class="outline-btn">
+        Download CV <i class="fas fa-download"></i>
+      </a>
+    </div>
+
+    <div class="social-icons">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+
+  <div class="about-image">
+    <div class="image-frame"></div>
+    <div class="about-photo"></div>
+  </div>
+
+  <div class="about-content">
+    <div class="section-label">
+      <span></span> About Me
+    </div>
+
+    <h2>Turning Ideas<br>
+      Into <span>Visual</span> Masterpieces
+    </h2>
+
+    <p>
+      I'm Tamil Vasan, a passionate Graphic Designer
+      with 1 year of professional experience in creating
+      modern and meaningful designs. I love exploring
+      creative concepts and delivering visuals that
+      communicate with impact.
+    </p>
+
+    <a href="#experience" class="small-btn">
+      Learn More <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <div class="about-extra">
+    <div class="experience-card">
+      <h2>1+</h2>
+      <p>Year<br>Experience</p>
+      <i class="fas fa-star"></i>
+    </div>
+
+    <div class="quote">
+      <span>“</span>
+      <p>
+        Design is not just what it looks like,
+        but how it makes you feel.
+      </p>
+      <small>— Tamil Vasan</small>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section class="skills section" id="skills">
+  <div class="skills-heading">
+    <span class="vertical-line"></span>
+    <div>
+      <h2>My Skills</h2>
+      <p>Tools I Use to Bring Ideas to Life</p>
+    </div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-logo ps">Ps</div>
+      <h3>Adobe<br>Photoshop</h3>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-logo ai">Ai</div>
+      <h3>Adobe<br>Illustrator</h3>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-logo id">Id</div>
+      <h3>Adobe<br>InDesign</h3>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-logo canva">C</div>
+      <h3>Canva</h3>
+    </div>
+  </div>
+
+  <div class="design-skills">
+    <div class="design-card">
+      <i class="fas fa-pen-nib"></i>
+      <h3>Branding &<br>Identity</h3>
+    </div>
+
+    <div class="design-card">
+      <i class="fas fa-bullhorn"></i>
+      <h3>Social Media<br>Design</h3>
+    </div>
+
+    <div class="design-card">
+      <i class="fas fa-image"></i>
+      <h3>Poster<br>Design</h3>
+    </div>
+
+    <div class="design-card">
+      <i class="fas fa-cube"></i>
+      <h3>Logo<br>Design</h3>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio section" id="portfolio">
+
+  <div class="portfolio-heading">
+    <div>
+      <h2>My Creative Works</h2>
+      <p>A Collection of My Designs</p>
+      <a href="#contact" class="outline-btn view-btn">
+        Let's Work Together <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <div class="project-card">
+      <img src="assets/project1.jpg" alt="Logo design project">
+      <div class="project-overlay">
+        <span>LOGO DESIGN</span>
+        <h3>Creative Logo Identity</h3>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/project2.jpg" alt="Social media poster design">
+      <div class="project-overlay">
+        <span>SOCIAL MEDIA POSTER</span>
+        <h3>Dream Bigger</h3>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/project3.jpg" alt="Brand identity design">
+      <div class="project-overlay">
+        <span>BRAND IDENTITY</span>
+        <h3>Premium Branding</h3>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/project4.jpg" alt="Product advertisement design">
+      <div class="project-overlay">
+        <span>PRODUCT ADVERTISEMENT</span>
+        <h3>Product Campaign</h3>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/project5.jpg" alt="Business flyer">
+      <div class="project-overlay">
+        <span>BUSINESS FLYER</span>
+        <h3>Business Promotion</h3>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/project6.jpg" alt="Brochure design">
+      <div class="project-overlay">
+        <span>BROCHURE DESIGN</span>
+        <h3>Corporate Brochure</h3>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/project7.jpg" alt="Creative typography">
+      <div class="project-overlay">
+        <span>CREATIVE TYPOGRAPHY</span>
+        <h3>Believe</h3>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/project8.jpg" alt="Packaging design">
+      <div class="project-overlay">
+        <span>PACKAGING DESIGN</span>
+        <h3>Product Packaging</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section class="experience section" id="experience">
+
+  <div class="experience-heading">
+    <span class="vertical-line"></span>
+    <div>
+      <h2>My Experience</h2>
+      <p>Building Creative Solutions</p>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-icon">
+      <i class="fas fa-briefcase"></i>
+    </div>
+    <div class="timeline-dot"></div>
+  </div>
+
+  <div class="job-details">
+    <h3>Graphic Designer</h3>
+    <h4>1 Year of Professional Experience</h4>
+    <span>Creative Point</span>
+    <p>
+      Designed engaging visuals for digital and print media,
+      including social media creatives, posters, branding
+      and marketing materials.
+    </p>
+  </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact section" id="contact">
+
+  <div class="contact-info">
+    <h2>Let's Work <span>Together!</span></h2>
+    <p>Have a project in mind or just want to say hi?</p>
+    <p>Feel free to reach out!</p>
+
+    <div class="contact-detail">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:tamilvasan@gmail.com">tamilvasan@gmail.com</a>
+    </div>
+
+    <div class="contact-detail">
+      <i class="fas fa-phone"></i>
+      <a href="tel:+919876543210">+91 98765 43210</a>
+    </div>
+
+    <div class="contact-detail">
+      <i class="fas fa-location-dot"></i>
+      <span>Coimbatore, Tamil Nadu, India</span>
+    </div>
+
+    <div class="contact-social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-behance"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
+  <form class="contact-form" id="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="4" required></textarea>
+    <button type="submit">
+      Send Message <i class="fas fa-arrow-right"></i>
+    </button>
+  </form>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <a href="#home" class="logo">
+    <span class="logo-icon">T<span>V</span></span>
+    <span>Tamil <b>Vasan</b></span>
+  </a>
+
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <p>© 2026 Tamil Vasan. All rights reserved.</p>
+
+  <a href="#home" class="top-btn">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
