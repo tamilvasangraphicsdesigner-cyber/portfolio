@@ -141,7 +141,7 @@ button, input, textarea {
   inset: 0;
   background:
     linear-gradient(90deg,rgba(0,0,0,.12),transparent),
-    url("assets/hero-bg.png") center center / 100% 100% no-repeat;
+    url("assets/hero-bg.png") right center / auto 100% no-repeat;
   z-index: 0;
 }
 
