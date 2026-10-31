@@ -861,7 +861,7 @@ button, input, textarea {
 
   .hero {
     min-height: 750px;
-    padding-top: 100px;
+    padding: 100px 6% 40px;
     align-items: flex-start;
 }
 
