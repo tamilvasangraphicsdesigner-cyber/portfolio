@@ -1,69 +1,34 @@
-// ==============================
+
 // MOBILE MENU
-// ==============================
 
-const menuButton = document.getElementById("menuButton");
-const navMenu = document.getElementById("navMenu");
+const menuIcon = document.getElementById("menuIcon");
+const navLinks = document.getElementById("navLinks");
 
-menuButton.addEventListener("click", () => {
+menuIcon.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
 
-    navMenu.classList.toggle("show");
-
+    if (navLinks.classList.contains("active")) {
+        menuIcon.classList.replace("fa-bars", "fa-xmark");
+    } else {
+        menuIcon.classList.replace("fa-xmark", "fa-bars");
+    }
 });
 
+// CLOSE MENU AFTER CLICKING A LINK
 
-// Close menu when clicking a link
-
-const navLinks = document.querySelectorAll(".nav-link");
-
-navLinks.forEach(link => {
-
+document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
-
-        navMenu.classList.remove("show");
-
+        navLinks.classList.remove("active");
+        menuIcon.classList.replace("fa-xmark", "fa-bars");
     });
-
 });
 
+// CONTACT FORM DEMO
 
-// ==============================
-// ACTIVE NAVIGATION
-// ==============================
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-const sections = document.querySelectorAll("section[id]");
+    alert("Thank you! Your message form is ready. Connect an email service to receive messages.");
 
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.offsetHeight;
-
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
+    this.reset();
 });
