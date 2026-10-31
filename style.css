@@ -861,14 +861,16 @@ button, input, textarea {
 
   .hero {
     min-height: 650px;
-    padding-top: 100px;
+    padding: 100px 6% 40px;
     align-items: flex-start;
-  }
+}
 
   .hero-bg {
-    background-position: 63% center;
-    opacity: .8;
-  }
+    background-size: 100% auto !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    opacity: 1;
+}
 
   .hero-content {
     width: 100%;
