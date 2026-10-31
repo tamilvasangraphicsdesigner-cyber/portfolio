@@ -863,11 +863,12 @@ button, input, textarea {
     min-height: 750px;
     padding: 100px 6% 40px;
     align-items: flex-start;
+    background-color: #050505;
 }
 
   .hero-bg {
-    background-size: auto 100%;
-    background-position: right center;
+    background-size: 100% auto;
+    background-position: center top;
     background-repeat: no-repeat;
     opacity: 1;
 }
